@@ -1,0 +1,59 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pepsi landing Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section class="sec">
+        <header>
+        <a href=""><img class="logo" src="logo.png" alt="Pepsi logo"></a>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Featured</a></li>
+            <li><a href="#">Newsletter</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+
+    <div class="content">
+        <div class="textBox">
+            <h2>That's What <br> <span>We like</span></h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, aspernatur eos ex non officiis fugit velit tempora autem. Dolorum, amet! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem, tempora!</p>
+            <a href="#">View all flavours</a>
+        </div>
+        <div class="imgBox">
+            <img src="pepsi001.png" class="pepsi"  width="220px">
+        </div>
+    </div>
+
+    <ul class="thumb">
+        <li><img src="pepsi001.png" onclick="imgChanger('pepsi001.png');changeBgColor('#0062be')"></li>
+        <li><img src="pepsi002.png" onclick="imgChanger('pepsi002.png');changeBgColor('#A2A4AA')"></li>
+        <li><img src="pepsi003.png" onclick="imgChanger('pepsi003.png');changeBgColor('#1e1e1e')"></li>
+    </ul>
+
+    <ul class="smi">
+        <li><a href="#"><img src="facebook.png" alt=""></a></li>
+        <li><a href="#"><img src="twitter.png" alt=""></a></li>
+        <li><a href="#"><img src="instagram.png" alt=""></a></li>
+    </ul>
+    </section>
+
+    <script type="text/javascript">
+
+    function imgChanger(bigPepsi){
+        document.querySelector('.pepsi').src = bigPepsi;
+    }
+
+    function changeBgColor(color){
+        const sec = document.querySelector('.sec');
+        sec.style.background = color;
+    }
+
+    </script>
+</body>
+</html>
